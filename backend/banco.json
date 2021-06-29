@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Leonide",
+      "message": "The break of the current system is near"
+    },
+    {
+      "id": 2,
+      "name": "Lewis",
+      "message": "The next great crash is near, and it'll be as we sleep"
+    },
+    {
+      "id": 3,
+      "name": "Lyon",
+      "message": "You will have nothing, but you will be happy"
+    },
+    {
+      "id": 4,
+      "name": "Owriovide",
+      "message": "Thou shalt be as gods"
+    },
+    {
+      "id": 5,
+      "name": "Myriade",
+      "message": "You can break even."
+    },
+    {
+      "id": 6,
+      "name": "Yoshi",
+      "message": "You can break even, but only at 0 Kelvin."
+    }
+  ]
+}

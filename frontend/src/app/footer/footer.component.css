@@ -1,0 +1,26 @@
+.icoGithub, .icoInstagram, .icoLinkedin {
+    color: white;
+}
+
+.icoGithub:hover {
+    color: greenyellow
+}
+
+.icoLinkedin:hover {
+    color: #0072b1
+}
+
+.icoInstagram:hover {
+    color: #c13584;
+}
+
+.social-network {
+    list-style: none;
+    padding: 0;
+}
+.social-network > li {
+    display: inline;
+    padding: 5px;
+    font-size: 35px;
+    margin: 0;
+}

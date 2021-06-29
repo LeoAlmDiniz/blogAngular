@@ -1,0 +1,58 @@
+Angular utiliza um conceito chamado CLI
+Command Line Interface. Constrói-se os componentes através de linhas de comando.
+
+npm i -g @angular/cli < --- isso aqui instala o angular globalmente. Já foi feito.
+
+ng new blog <--- isso aqui é o cria a pasta chamada 'blog' com todos os node_modules necessários para o front-end
+#ng significa chamar o angular
+
+cd blog < --- entra na pasta blog
+
+ng serve < --- joga na porta
+
+A PRIMEIRA COISA ENTÃO É SEPARAR O BACKEND DO FRONTEND
+CRIAMOS UMA PASTA CHAMADA BACKEND, E JOGAMOS TUDO QUE FIZEMOS NA PRIMEIRA ETAPA PRA LÁ. 
+INCLUSIVEMENTE, A PRIMEIRA PASTA NODE_MODULES USADA NA CRIAÇÃO DO BACKEND (O QUE GEROU O SERVER) FOI PRA LÁ
+
+Outra observação interessante:
+Qdo a gente faz ng serve -o, que é pra subir o servidor e tal, esse -o é open. Significa que ele já abre o browser pra agente
+Lembra que o Back end tava na porta 3000
+O Angular cria o front end na porta 4200
+
+
+Agora vamos lá, como usar o CLI
+(todos os CLI são executados na pasta DO PROJETO, a pasta mae de src)
+
+- ng g c <nome> construir um componente de nome <nome>
+O que acontece? Cria dentro de app uma pasta de nome <nome>. Essa pasta
+vem com quatro arquivos de nome <nome>: um css, um html, um ts e um spec.ts
+O unico que intessa por hora é o conteúdo do ts:
+Nele, já vem a estrutura de um componente, que cria e exporta uma classe de nome <Nome>Component (tudo junto mesmo)
+e via essa estrtura de escrita de TypeScrit (que é como se fosse um Megazord JavaScript)
+meio que nos fornece uma maneira de selecionar esse componente e especifica que ele é descrito pelos 
+códigos html e css criados. É algo nessa linha.
+
+
+Agora vamos um pouco pro app-routing.module:
+Esse arquivo foi criado pq a gente pediu pra ele criar um arquivo de rotas.
+É nele que a gente especifica as "rotas" da nossa aplicação. Tem que ser com chaves
+
+
+O que vem dps é:
+npm i bootstrap
+O que é o bootstrap? "É o nosso framework de css."
+npm i jquery@~3.4.1 (necessário para o bootstrap)
+npm i popper.js (mais um pacote necessário para o bootstrap)
+ng add @fortawesome/angular-fontawesome (parece que é um pacote de ícones que tem PRO ANGUALR)
+
+EM SEGUIDA, ISSO AQUI É ADICIONADO EM ANGULAR.JSON:
+"styles": [
+    "src/styles.css",
+    "./node_modules/bootstrap/dist/css/bootstrap.min.css"], <--- ISSO
+"scripts": [
+    "./node_modules/jquery/dist/jquery.js", <--- ISSO
+    "./node_modules/bootstrap/dist/js/bootstrap.js", <--- ISSO
+    "./node_modules/popper.js/dist/umd/popper.min.js"?] <--- E ISSO
+
+O que isso faz é que agora, quando referenciar eles em qualquer lugar do angular
+eles vão ser reeconhecidos

@@ -1,0 +1,52 @@
+Primeiro eu digitei:
+npm init -y 
+O que isso faz? -y = equivale a dar Yes para tudo que ele ia perguntar.
+Ele cria o Package.json, que representa todas as configurações da nossa plciação:
+nome, versão, autor, todas essas informações vão nesse package.json. Ele também contem
+um item chamado dependencies: todos os pacotes e módulos que ela precisa para que ela
+funcione corretamente.
+
+No nosso caso, a gente vai instalar uma dependencia chhamda json-server:
+npm i json-server
+
+
+EM PACKAGE.JSON:
+Cara, muito boa essa aula, o cara explica. Vamos lá.
+A coisa mais fácil do mundo é construir essa API usando o módulo json-server
+Aqui em scripts, a gente pode colocar qualquer script que quisermos
+A gente chamou de start, mas poderia ser qualquer coisa. Beleza, start chama uma string
+"json-server --watch banco.json --port 3000"
+--watch é para assistir um arquivo, no caso esse que chamamos de banco.json
+só que a gente especifica que ele vai ficar assitindo na porta 3000
+Agora, toda a vez que a gente acessar a port 3000, ele vai ficar escuatando
+banco.js e subir os dados nessa porta.
+
+TÁ, MAS COMO ISSO COMEÇA A ACONTECER?
+Porta 3000 né. Mas lembra o seguinte, isso tudo depende do método http que a gente
+tá usando, GET,POST, DELETE. Óbvio que se é pra acessar o site, o que a gente quer é GET.
+Mas enfim, pra rodar isso tudo, o que a gente tem que fazer é rodar aqui no terminal do computador o seguinte.
+Pra subir o servidor:
+npm start (nome do script que vc colocou em package.json) 
+
+  \{^_^}/ hi!       
+
+  Loading banco.json
+  Done
+
+  Resources
+  http://localhost:3000/posts
+
+  Home
+  http://localhost:3000      
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+  Vc ve que ele ja cria uma rota Posts. Isso porque banco.json possui um objeto com esse nome.
+  Então basicamente ele deve criar uma rota para cada objeto json contido no arquivo que o pacote chama. Interessante.
+
+
+  OLHA O COMENTÁRIO DO PROFESSOR AGORA:
+  "Temos aí o nosso backend construído".
+  "Vamos agora construir nosso front-end utilizando o Angular". (que vai consumir dados do backend)
+  

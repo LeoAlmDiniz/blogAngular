@@ -1,0 +1,18 @@
+<app-navbar></app-navbar><!-- já gera o "navbar works"-->
+<!-- por que isso existe, vamos lá?
+A magia toda tá no que o typescript faz quando a gente criou o 
+componente navbar. Ele cria dentro de app uma pasta navbar, com um typescript navbar.component.ts
+no qual @component é especificado como objeto contendo um selector 'app-navbar'. Essa linha ai, justamente ela
+cria essa magia de que agora, nesse html app.comopnent.html, temos acesso a um
+componente de nome especial, 'app-navbar' que nos fornece todas as funcionalidades escritas lá
+Não é fácil, mas é isso aí-->
+
+<router-outlet></router-outlet>
+<!-- Esse cara aqui é o responsável por fazer o roteamento dos conteúdos
+Quando a gente coloca ele, ele retorna pra a gente home works
+em home, ele retorna feed works em feed, footer works em footer
+Em suma, ele é o cara que permite que o que está aqui seja 
+alterado. Agora, de onde vem a magia dele? É uma boa pergunta, eu não sei dizer
+creio que provavelmente da pasta node-modules em @angular/router -->
+
+<app-footer></app-footer> <!-- já gera o "footer works"-->
